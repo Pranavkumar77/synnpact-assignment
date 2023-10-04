@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
-import Article from './Article'; // Import the Article component
+import Article from './Article';
 
 const InfiniteScroll = () => {
   const [articles, setArticles] = useState([]);
