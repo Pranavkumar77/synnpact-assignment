@@ -17,7 +17,7 @@ const InfiniteScroll = () => {
       console.log(nodes)
       if (nodes && nodes.length > 0) {
         setArticles((prevArticles) => [...prevArticles, ...nodes]);
-        setPage(page + 1); // next page for the next request
+        setPage(page + 1);
       }
     } catch (error) {
       console.error('Error in api response', error);
@@ -28,7 +28,7 @@ const InfiniteScroll = () => {
 
   useEffect(() => {
     fetchArticles();
-  }, []); // On first render
+  }, []);
 
   useEffect(() => {
     window.addEventListener('scroll', handleScroll);
